@@ -16,7 +16,9 @@ export class OddsFacade {
 
     public async refreshEvents(): Promise<void> {
         // const competitions = await this.oddsProvider.fetchCompetitions();
-        const competitions: Competition[] = [{sport: 'soccer', id: 'soccer', name: 'bundesliga'}];
+
+        //Due to the limitations of the test account, I'm temporarily fetching only upcoming football matches.
+        const competitions: Competition[] = [{sport: 'soccer', id: 'soccer', name: 'soccer'}];
         await Promise.all(
             competitions.map((competition) => this.refreshCompetitionEvents(competition.id))
         );
