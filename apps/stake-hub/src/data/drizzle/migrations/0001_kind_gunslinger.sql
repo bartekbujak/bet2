@@ -1,0 +1,1 @@
+ALTER TABLE "stake_selections" ALTER COLUMN "price" SET DATA TYPE double precision;

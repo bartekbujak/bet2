@@ -1,0 +1,1 @@
+ALTER TABLE "stakes" ADD COLUMN "total" double precision NOT NULL;
