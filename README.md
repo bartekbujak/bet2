@@ -26,13 +26,13 @@ For a real API account, it's possible to enable fetching of all competitions.
 ### Oddshub
 ``cd apps/odds-hub``
 1. Run migrations and setup .env
-2. ``pnpm exec drizzle-kit generate  ``
+2. ``pnpm exec drizzle-kit migrate  ``
 3. setup .dotenv
 
 ### Stakehub
 ``cd apps/stake-hub``
 1. Run migrations and setup .env
-2. ``pnpm exec drizzle-kit generate  ``
+2. ``pnpm exec drizzle-kit migrate  ``
 3. setup .dotenv
 
 `docker compose up`
