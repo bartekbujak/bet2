@@ -4,6 +4,7 @@ import type { StakeCreateDto, StakeDto } from '../dto/stakeDto';
 import {StakeSelection} from "../model/stakeSelection";
 import {Stake} from "../model/stake";
 import {OddsHubClient} from "../service/oddsHubClient";
+import { v4 as uuidv4 } from 'uuid';
 
 @singleton()
 export class StakesFacade {
@@ -19,10 +20,8 @@ export class StakesFacade {
 
     public async createStake(data: StakeCreateDto): Promise<void> {
         const odds = await this.oddsHubClient.fetchEvents(false);
-        const stakeUUID = '944f63d0-5a23-48a8-9408-e7d87e6dfe2f';
+        const stakeUUID = uuidv4();
         const now = new Date();
-        console.log(now);
-
 
         const stakeSelections = data.selections
             .filter(selection => odds.some(outcome => outcome.outcomeId === selection.outcomeId))
