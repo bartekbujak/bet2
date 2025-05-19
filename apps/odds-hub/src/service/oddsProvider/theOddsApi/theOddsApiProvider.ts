@@ -60,7 +60,7 @@ export class TheOddsApiProvider implements IOddsProvider{
                 name: sport.title,
             }));
         } catch (error) {
-            console.error("Błąd podczas pobierania konkurencji:", error);
+            console.error("Error fetch competitions:", error);
             return [];
         }
     }
@@ -83,7 +83,7 @@ export class TheOddsApiProvider implements IOddsProvider{
                     : []
             }));
         } catch (error) {
-            console.error("Błąd podczas pobierania konkurencji:", error);
+            console.error("Error fetch events:", error);
             return [];
         }
     }
